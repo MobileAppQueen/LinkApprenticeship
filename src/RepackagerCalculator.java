@@ -12,11 +12,13 @@ public class RepackagerCalculator {
     double FOOD_MARKUP = 0.13;
     double ELEC_MARKUP = 0.02;
 
+    import java.math.BigDecimal;
 
-    public double calculateCost(double basePrice, double numOfWorkers, int isPharma, int isFood, int isElec) {
+
+    public BigDecimal calculateCost(double basePrice, double numOfWorkers, int isPharma, int isFood, int isElec) {
         if (numOfWorkers>0 || basePrice>0) {
             double otherMarkups = isPharma * PHARM_MARKUP + isFood * FOOD_MARKUP + isElec * ELEC_MARKUP;
-            double finalprice = (basePrice * BASE_MARKUP) * (1 + numOfWorkers * PERSON_MARKUP + otherMarkups);
+            BigDecimal finalprice = ( new BigDecimal(basePrice) * BASE_MARKUP) * (1 + numOfWorkers * PERSON_MARKUP + otherMarkups);
         }else{
             throw new IllegalArgumentException("You cannot have a negative amount of workers or negative Base Price");
         }

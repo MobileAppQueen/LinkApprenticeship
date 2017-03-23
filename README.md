@@ -11,14 +11,19 @@ Runtime Versions/Dependencies
 Command Line Instructions
 ===============
 
-TBD
+run java /pathto/RepackagerCalculatorTest
+
 
 
 
 
 Assumptions
 ===============
-Looking at the Pricing Problem below, nothing assumes that an item could not be more than one type, ie a food and electronic item. Assuming these markups would build on each other.
+Looking at the Pricing Problem below, nothing assumes that an item could not be more than one type, i.e. a food and electronic item. Assuming these markups would build on each other.
+
+Used BigDecimal has it is more accurate for monetary calculations due to rounding capabilities
+
+Due to time constraints, was not able to write full test code and implement more complex code to solve issue. 
 
 
 Pricing problem
