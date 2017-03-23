@@ -2,8 +2,6 @@
  * Created by janelle on 2017-03-21.
  */
 
-package JanelleRepackagerCalculator;
-
 
 public class RepackagerCalculator {
 
@@ -15,7 +13,7 @@ public class RepackagerCalculator {
     double ELEC_MARKUP = 0.02;
 
 
-    double calculateCost(double basePrice, double numOfWorkers, int isPharma, int isFood, int isElec) {
+    public double calculateCost(double basePrice, double numOfWorkers, int isPharma, int isFood, int isElec) {
         double otherMarkups = isPharma * PHARM_MARKUP + isFood * FOOD_MARKUP + isElec * ELEC_MARKUP;
         double finalprice = (basePrice * BASE_MARKUP) * (1+ numOfWorkers * PERSON_MARKUP + otherMarkups);
         return finalprice;

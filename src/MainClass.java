@@ -1,13 +1,10 @@
 /**
  * Created by janelle on 2017-03-21.
  */
-package JanelleRepackagerCalculator;
-
-import JanelleRepackagerCalculator.RepackagerCalculator;
 
 
 public class MainClass {
-
+//Just to test until Test class set up
     public static void main(String[] args){
         RepackagerCalculator Calculators = new RepackagerCalculator();
         double price=Calculators.calculateCost(1299.99,3,0,1,0);
