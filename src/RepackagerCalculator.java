@@ -14,8 +14,12 @@ public class RepackagerCalculator {
 
 
     public double calculateCost(double basePrice, double numOfWorkers, int isPharma, int isFood, int isElec) {
-        double otherMarkups = isPharma * PHARM_MARKUP + isFood * FOOD_MARKUP + isElec * ELEC_MARKUP;
-        double finalprice = (basePrice * BASE_MARKUP) * (1+ numOfWorkers * PERSON_MARKUP + otherMarkups);
+        if (numOfWorkers>0 || basePrice>0) {
+            double otherMarkups = isPharma * PHARM_MARKUP + isFood * FOOD_MARKUP + isElec * ELEC_MARKUP;
+            double finalprice = (basePrice * BASE_MARKUP) * (1 + numOfWorkers * PERSON_MARKUP + otherMarkups);
+        }else{
+            throw new IllegalArgumentException("You cannot have a negative amount of workers or negative Base Price");
+        }
         return finalprice;
     }
 }

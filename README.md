@@ -2,13 +2,23 @@ This is for Nulogy's Link Apprenticeship Coding Exercise
 
 
 Runtime Versions/Dependencies
+===============
+
 * jdk-1.8
 * junit-4.12
 
 
 Command Line Instructions
+===============
+
 TBD
 
+
+
+
+Assumptions
+===============
+Looking at the Pricing Problem below, nothing assumes that an item could not be more than one type, ie a food and electronic item. Assuming these markups would build on each other.
 
 
 Pricing problem
